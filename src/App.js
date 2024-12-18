@@ -26,7 +26,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        {users?.accessToken && <Navbar />}
         <Routes>
           <Route path="/" element={<Auth />} />
           <Route path="dashboard" element={<Home users={users} />} />
